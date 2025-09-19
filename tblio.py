@@ -177,3 +177,8 @@ def write_noahmptbl(ofilename,dict_value,dict_format,dict_parameters_format_sect
             # print([line])
         ofile.write(line)
     ofile.close()
+
+def float_nsf(num, n=1):
+    """Converts a float to a string with n significant figures."""
+    numstr = ("{0:.%ie}" % (n - 1)).format(num)
+    return float(numstr)
